@@ -19,7 +19,7 @@ public:
 	{
 		if (hFindFile == INVALID_HANDLE_VALUE) {
 			hFindFile = /*WINBASEAPI HANDLE WINAPI*/FindFirstFileW
-			( /*_In_  LPCWSTR            lpFileName    */L"..\\*"
+			( /*_In_  LPCWSTR            lpFileName    */filename.c_str()
 			, /*_Out_ LPWIN32_FIND_DATAW lpFindFileData*/lpFindFileData
 			);
 			return hFindFile != INVALID_HANDLE_VALUE;
